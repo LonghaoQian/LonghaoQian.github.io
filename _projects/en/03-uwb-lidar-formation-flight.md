@@ -3,7 +3,7 @@ layout: page
 title: "Cooperative UWB and LiDAR Drone Navigation with Reinforcement Learning (PPO)"
 description: "Observability-Gramian-aware leader–follower formation flight where followers use only an IMU and a single UWB range; LiDAR SLAM for the leader and a PPO planning policy trained in Isaac Lab. Published in JGCD."
 lang: en
-permalink: /projects/uwb-lidar-formation-flight/
+permalink: /research/uwb-lidar-formation-flight/
 category: research
 featured: true # shown on the home page
 importance: 3

@@ -3,7 +3,7 @@ layout: page
 title: "Trustworthy AI Control Framework Based on Physics-Informed Neural Networks (PINNs)"
 description: "PINN-trained controllers with stability guarantees, generated without any training data; contraction metrics on Riemannian manifolds (RCCM) for singularity-free robust control. Accepted at CDC 2026 and AIAA SciTech 2027."
 lang: en
-permalink: /projects/pinn-trustworthy-control/
+permalink: /research/pinn-trustworthy-control/
 category: research
 featured: true # shown on the home page
 importance: 2

@@ -3,7 +3,7 @@ layout: page
 title: "中仿智能：飞行动力学仿真算法与软件系统研发"
 description: "覆盖A320、C172的飞行仿真软件系统；可替代Simulink模块化仿真功能的C++仿真工具库；六自由度飞行、失速、起落架撞击、液压动力及电力系统控制等Simulink仿真模型。"
 lang: zh-CN
-permalink: /zh/projects/cntech-flight-simulation/
+permalink: /zh/industry/cntech-flight-simulation/
 category: 工业界项目
 importance: 10
 cv_group: cntech

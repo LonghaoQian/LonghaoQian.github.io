@@ -3,7 +3,7 @@ layout: page
 title: "Reinforcement Learning for Drone Territory Security and Counter-UAV Interception"
 description: "Autonomous swarm defense and interception from radio angle-of-arrival measurements alone, using MADDPG and an RNN-based HA-RMAPPO framework. Published in Science China Technological Sciences."
 lang: en
-permalink: /projects/counter-uav-territory-defense/
+permalink: /research/counter-uav-territory-defense/
 category: research
 importance: 5
 cv_group: utias-postdoc

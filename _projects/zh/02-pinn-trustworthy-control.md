@@ -3,7 +3,7 @@ layout: page
 title: "基于物理信息神经网络（PINN）的可信AI控制框架"
 description: "无需训练数据集、严格满足稳定性理论要求的PINN控制网络；结合黎曼流形与收缩分析的鲁棒控制收缩度量（RCCM）。成果已被CDC 2026与AIAA 2027 SciTech Forum录用。"
 lang: zh-CN
-permalink: /zh/projects/pinn-trustworthy-control/
+permalink: /zh/research/pinn-trustworthy-control/
 category: 科研项目
 featured: true # shown on the home page
 importance: 2

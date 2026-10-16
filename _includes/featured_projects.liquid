@@ -1,6 +1,6 @@
 {% comment %}
   Cards for the projects marked `featured: true`, in the current page's language, ordered by `importance`.
-  Usage: {% include featured_projects.liquid heading='featured projects' url='/projects/' %}
+  Usage: {% include featured_projects.liquid heading='featured projects' url='/research/' %}
 {% endcomment %}
 {%- assign featured_projects = site.projects | where: 'lang', page.lang | where: 'featured', true | sort: 'importance' -%}
 {%- if featured_projects.size > 0 -%}

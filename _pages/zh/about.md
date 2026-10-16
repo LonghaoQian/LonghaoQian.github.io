@@ -29,17 +29,9 @@ latest_posts:
 
 {{ site.data.profile.zh.bio | markdownify }}
 
-更多内容：[项目经历]({{ '/zh/projects/' | relative_url }}) · [学术成果]({{ '/zh/publications/' | relative_url }}) · [授课经历]({{ '/zh/teaching/' | relative_url }}) · [个人简历]({{ '/zh/cv/' | relative_url }})
+更多内容：[学术成果]({{ '/zh/publications/' | relative_url }}) · [科研项目]({{ '/zh/research/' | relative_url }}) · [工业界经历]({{ '/zh/industry/' | relative_url }}) · [授课经历]({{ '/zh/teaching/' | relative_url }}) · [个人简历]({{ '/zh/cv/' | relative_url }})
 
-{% include featured_projects.liquid heading='代表性项目' url='/zh/projects/' %}
-
-<h2>
-  <a href="{{ '/zh/publications/' | relative_url }}" style="color: inherit">代表性学术成果</a>
-</h2>
-
-<div class="publications">
-  {% bibliography --file papers_zh --group_by none --query @*[selected=true]* %}
-</div>
+{% include featured_projects.liquid heading='代表性项目' url='/zh/research/' %}
 
 <div class="social">
   <div class="contact-icons">{% social_links %}</div>

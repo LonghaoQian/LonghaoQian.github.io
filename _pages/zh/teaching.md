@@ -4,7 +4,7 @@ permalink: /zh/teaching/
 title: 授课经历
 description: 在加拿大多伦多大学航空航天学院讲授的研究生课程。
 nav: true
-nav_order: 4
+nav_order: 5
 lang: zh-CN
 ---
 

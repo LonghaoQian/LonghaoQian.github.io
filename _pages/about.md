@@ -14,7 +14,7 @@ profile:
     <p>4925 Dufferin St, North York</p>
     <p>ON M3H 5T6, Canada</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
@@ -26,6 +26,6 @@ latest_posts:
 
 {{ site.data.profile.en.bio | markdownify }}
 
-More details: [projects]({{ '/projects/' | relative_url }}) · [publications]({{ '/publications/' | relative_url }}) · [teaching]({{ '/teaching/' | relative_url }}) · [CV]({{ '/cv/' | relative_url }})
+More details: [publications]({{ '/publications/' | relative_url }}) · [research]({{ '/research/' | relative_url }}) · [industrial experience]({{ '/industry/' | relative_url }}) · [teaching]({{ '/teaching/' | relative_url }}) · [CV]({{ '/cv/' | relative_url }})
 
-{% include featured_projects.liquid heading='featured projects' url='/projects/' %}
+{% include featured_projects.liquid heading='featured projects' url='/research/' %}

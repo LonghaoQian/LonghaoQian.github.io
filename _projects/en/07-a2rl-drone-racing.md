@@ -3,7 +3,7 @@ layout: page
 title: "2025 A2RL Abu Dhabi Autonomous Drone Racing"
 description: "Lead of the control and visual-navigation subsystems for the University of Toronto team: monocular-camera-only racing, 7th of 22 teams and a US$10,000 prize; ~15 cm tracking accuracy at 8–12 m/s."
 lang: en
-permalink: /projects/a2rl-drone-racing/
+permalink: /research/a2rl-drone-racing/
 category: competition
 importance: 7
 cv_group: utias-postdoc

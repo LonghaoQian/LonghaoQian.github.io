@@ -3,7 +3,7 @@ layout: page
 title: "Drone-Based Aerial Security System with 5G and AI Edge Computing"
 description: "NSERC / IDEaS-funded project (C$1.54M): flight control and energy-optimal path planning for drones carrying 5G base stations, genetic-algorithm area surveillance, and YOLOv8 detection of ground intruders."
 lang: en
-permalink: /projects/5g-aerial-security/
+permalink: /research/5g-aerial-security/
 category: research
 importance: 6
 cv_group: utias-postdoc

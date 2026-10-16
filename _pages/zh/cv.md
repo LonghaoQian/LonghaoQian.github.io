@@ -2,9 +2,9 @@
 layout: page
 permalink: /zh/cv/
 title: 个人简历
-description: 个人简历。以下项目介绍与“项目经历”页面内容一致。
+description: 个人简历。以下项目介绍与“科研项目”和“工业界经历”页面内容一致。
 nav: true
-nav_order: 5
+nav_order: 6
 lang: zh-CN
 toc:
   sidebar: left

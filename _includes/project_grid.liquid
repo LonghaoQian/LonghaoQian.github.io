@@ -1,0 +1,29 @@
+{% comment %}
+  Cards for the projects of one category, in the current page's language, ordered by `importance`.
+  Usage: {% include project_grid.liquid category='research' heading='research projects' %}   (heading is optional)
+{% endcomment %}
+{%- assign grid_projects = site.projects | where: 'lang', page.lang | where: 'category', include.category | sort: 'importance' -%}
+{%- if grid_projects.size > 0 -%}
+  <div class="project-grid">
+    {%- if include.heading -%}
+      {%- assign grid_anchor = include.heading | slugify: 'raw' -%}
+      <a id="{{ grid_anchor }}" href=".#{{ grid_anchor }}">
+        <h2 class="category">{{ include.heading }}</h2>
+      </a>
+    {%- endif -%}
+    <style>
+      /* Full project titles are long; keep the cards compact. */
+      .projects .card-title {
+        font-size: 1.15rem;
+        line-height: 1.35;
+      }
+    </style>
+    <div class="projects">
+      <div class="row row-cols-1 row-cols-md-3">
+        {%- for project in grid_projects -%}
+          {% include projects.liquid %}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+{%- endif -%}

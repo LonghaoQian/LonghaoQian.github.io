@@ -3,7 +3,7 @@ layout: page
 title: "基于无人机机械臂平台的空中具身智能与视觉语言大模型（VLM）研究"
 description: "基于L1自适应控制的空中机械臂操作（平均误差3–4 cm）、PPO Sim2Real控制校正、Jetson Orin 400 Hz直接控制，以及基于Qwen2.5-VL的自主识别与抓取。"
 lang: zh-CN
-permalink: /zh/projects/aerial-embodied-ai/
+permalink: /zh/research/aerial-embodied-ai/
 category: 科研项目
 featured: true # shown on the home page
 importance: 1

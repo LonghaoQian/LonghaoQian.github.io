@@ -3,7 +3,7 @@ layout: page
 title: "Flight Dynamics Simulation Algorithms and Software (CNTech)"
 description: "Flight simulation software for the A320 and C172, a C++ simulation library that replaces Simulink's modular simulation, and Simulink models of 6-DOF flight, stall, landing-gear impact, hydraulics, and electrical systems."
 lang: en
-permalink: /projects/cntech-flight-simulation/
+permalink: /industry/cntech-flight-simulation/
 category: industry
 importance: 10
 cv_group: cntech

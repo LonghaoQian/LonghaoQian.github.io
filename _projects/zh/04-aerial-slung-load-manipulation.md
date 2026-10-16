@@ -3,7 +3,7 @@ layout: page
 title: "基于强化学习和物理信息神经网络的空中吊运操作机器人控制算法研究"
 description: "六人团队：基于PINN与鲁棒干扰观测器的容错控制、PPO Sim2Real控制校正、Jetson Orin神经网络部署，以及基于CubeMars AK40-10关节电机与CAN通信的实时缆绳操纵系统。"
 lang: zh-CN
-permalink: /zh/projects/aerial-slung-load-manipulation/
+permalink: /zh/research/aerial-slung-load-manipulation/
 category: 科研项目
 importance: 4
 cv_group: utias-postdoc

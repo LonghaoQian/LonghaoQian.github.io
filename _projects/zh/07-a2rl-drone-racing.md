@@ -3,7 +3,7 @@ layout: page
 title: "2025 A2RL阿布扎比无人机自主飞行竞速比赛"
 description: "多伦多大学参赛队无人机控制系统和视觉导航分系统负责人：纯单目视觉竞速，22支队伍中获团体第7名，获得1万美元奖金；8–12 m/s高速飞行跟踪精度约15 cm。"
 lang: zh-CN
-permalink: /zh/projects/a2rl-drone-racing/
+permalink: /zh/research/a2rl-drone-racing/
 category: 竞赛
 importance: 7
 cv_group: utias-postdoc

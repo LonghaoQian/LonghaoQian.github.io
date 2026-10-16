@@ -3,7 +3,7 @@ layout: page
 title: "Control of Aerial Slung-Load Manipulation Robots with Reinforcement Learning and Physics-Informed Neural Networks"
 description: "Six-person team: PINN-trained fault-tolerant control with robust disturbance observers, PPO sim-to-real correction, Jetson Orin deployment, and a real-time cable-manipulation system built on CubeMars AK40-10 motors and CAN."
 lang: en
-permalink: /projects/aerial-slung-load-manipulation/
+permalink: /research/aerial-slung-load-manipulation/
 category: research
 importance: 4
 cv_group: utias-postdoc

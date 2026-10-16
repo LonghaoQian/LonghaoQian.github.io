@@ -3,7 +3,7 @@ layout: page
 title: "博士研究：多无人机协同绳系负载运输的控制理论与工程实现"
 description: "基于多体动力学与李雅普诺夫方法的多无人机协同绳系负载运输非线性控制（JGCD、IEEE TIE、IEEE/ASME TMECH，引用超过300次），基于C++与ROS在Jetson Nano及Pixhawk上从零实现。"
 lang: zh-CN
-permalink: /zh/projects/phd-cooperative-payload-transport/
+permalink: /zh/research/phd-cooperative-payload-transport/
 category: 科研项目
 importance: 8
 cv_group: utias-phd

@@ -3,7 +3,7 @@ layout: page
 title: "Aerial Embodied Intelligence and Vision-Language Models (VLMs) on a Drone-Manipulator Platform"
 description: "L1 adaptive control for an aerial manipulator (3–4 cm average manipulation error), PPO sim-to-real correction, 400 Hz control from a Jetson Orin, and Qwen2.5-VL-driven autonomous grasping."
 lang: en
-permalink: /projects/aerial-embodied-ai/
+permalink: /research/aerial-embodied-ai/
 category: research
 featured: true # shown on the home page
 importance: 1

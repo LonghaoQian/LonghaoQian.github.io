@@ -3,7 +3,7 @@ layout: page
 title: "基于5G与AI边缘计算的无人机空中安防系统"
 description: "NSERC与IDEaS资助项目（154万加元）：机载5G基站无人机的飞行控制与能量最优路径规划、基于遗传算法的区域扫描监视，以及基于YOLOv8的地面入侵人员检测。"
 lang: zh-CN
-permalink: /zh/projects/5g-aerial-security/
+permalink: /zh/research/5g-aerial-security/
 category: 科研项目
 importance: 6
 cv_group: utias-postdoc

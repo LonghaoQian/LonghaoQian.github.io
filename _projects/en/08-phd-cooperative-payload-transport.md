@@ -3,7 +3,7 @@ layout: page
 title: "Ph.D. Research: Cooperative Tethered-Payload Transportation with Multiple Drones"
 description: "Lyapunov-based nonlinear control for multi-drone tethered-payload transport (JGCD, IEEE TIE, IEEE/ASME TMECH; 300+ citations), implemented from scratch in C++/ROS on a Jetson Nano with a Pixhawk."
 lang: en
-permalink: /projects/phd-cooperative-payload-transport/
+permalink: /research/phd-cooperative-payload-transport/
 category: research
 importance: 8
 cv_group: utias-phd

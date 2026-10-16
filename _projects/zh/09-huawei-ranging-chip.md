@@ -3,7 +3,7 @@ layout: page
 title: "华为：低功耗短距测距与通信芯片驱动及智能家居解决方案"
 description: "下一代低功耗短距测距与通信芯片驱动开发项目负责人：新型调度算法相比传统UWB系统节省30%功耗；芯片软件在环验证时间由40分钟缩短至44秒。"
 lang: zh-CN
-permalink: /zh/projects/huawei-ranging-chip/
+permalink: /zh/industry/huawei-ranging-chip/
 category: 工业界项目
 importance: 9
 cv_group: huawei

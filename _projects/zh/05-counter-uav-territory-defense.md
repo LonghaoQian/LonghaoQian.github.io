@@ -3,7 +3,7 @@ layout: page
 title: "基于强化学习的无人机区域安全和反无人机拦截算法研究"
 description: "仅依赖无线电到达角测量的无人机集群自主防守与拦截：基于MADDPG的主动定位策略与基于RNN的HA-RMAPPO训练框架。成果发表于Science China Technological Sciences。"
 lang: zh-CN
-permalink: /zh/projects/counter-uav-territory-defense/
+permalink: /zh/research/counter-uav-territory-defense/
 category: 科研项目
 importance: 5
 cv_group: utias-postdoc

@@ -3,7 +3,7 @@ layout: page
 title: "Low-Power Short-Range Ranging and Communication Chip Software (Huawei)"
 description: "Project lead for the drivers of a next-generation low-power short-range ranging and communication chip: a scheduling algorithm using 30% less power than conventional UWB, and SIL verification cut from 40 minutes to 44 seconds."
 lang: en
-permalink: /projects/huawei-ranging-chip/
+permalink: /industry/huawei-ranging-chip/
 category: industry
 importance: 9
 cv_group: huawei

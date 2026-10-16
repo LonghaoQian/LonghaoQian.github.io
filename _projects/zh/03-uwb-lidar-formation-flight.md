@@ -3,7 +3,7 @@ layout: page
 title: "基于强化学习（PPO）的UWB和激光雷达无人机协同导航算法研究"
 description: "基于可观性Gramian矩阵的长僚机编队定位与导航：僚机仅依赖IMU与单一UWB距离测量；长机激光雷达SLAM定位与Isaac Lab中训练的PPO编队飞行策略。成果发表于JGCD。"
 lang: zh-CN
-permalink: /zh/projects/uwb-lidar-formation-flight/
+permalink: /zh/research/uwb-lidar-formation-flight/
 category: 科研项目
 featured: true # shown on the home page
 importance: 3

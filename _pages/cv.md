@@ -2,9 +2,9 @@
 layout: page
 permalink: /cv/
 title: CV
-description: Curriculum vitae. The project descriptions below are the same as on the projects pages.
+description: Curriculum vitae. The project descriptions below are the same as on the research and industrial experience pages.
 nav: true
-nav_order: 5
+nav_order: 6
 lang: en
 toc:
   sidebar: left
