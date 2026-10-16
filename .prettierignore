@@ -13,3 +13,5 @@ _scripts/*
 _data/citations.yml
 # Personal notes, not part of the site
 record.md
+# Google Search Console verification file (must stay byte-for-byte as issued)
+google*.html
