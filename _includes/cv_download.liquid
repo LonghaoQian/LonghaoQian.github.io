@@ -1,0 +1,60 @@
+{% comment %}
+  Download button for the PDF version of the CV, plus print styles so the CV page prints as a clean document.
+  Usage: {% include cv_download.liquid pdf='/assets/cv/Longhao_Qian_CV_EN.pdf' label='Download PDF' %}
+{% endcomment %}
+<p class="cv-download">
+  <a class="btn btn-sm z-depth-0" role="button" href="{{ include.pdf | relative_url }}" target="_blank" rel="noopener noreferrer">
+    <i class="fa-solid fa-file-pdf"></i> {{ include.label }}
+  </a>
+</p>
+<style>
+  @page {
+    size: letter;
+    margin: 14mm 14mm 16mm;
+  }
+  @media print {
+    /* Web type sizes are large on paper; scale the rem-based theme down for print. */
+    html {
+      font-size: 11.5px !important;
+    }
+    body > header,
+    body > footer,
+    #toc-sidebar,
+    .cv-download,
+    .post-description,
+    .links {
+      display: none !important;
+    }
+    .row > .col-sm-3:has(#toc-sidebar) {
+      display: none !important;
+    }
+    .row > .col-sm-9 {
+      flex: 0 0 100% !important;
+      max-width: 100% !important;
+    }
+    body {
+      padding-top: 0 !important;
+    }
+    .container {
+      max-width: 100% !important;
+      margin-top: 0 !important;
+    }
+    .post-title::before {
+      content: 'Longhao Qian — ';
+    }
+    a {
+      color: inherit !important;
+      text-decoration: none !important;
+    }
+    h2,
+    h3,
+    h4 {
+      break-after: avoid;
+    }
+    li,
+    tr,
+    .publications li {
+      break-inside: avoid;
+    }
+  }
+</style>

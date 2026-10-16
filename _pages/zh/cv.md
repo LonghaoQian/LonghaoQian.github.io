@@ -12,6 +12,8 @@ toc:
 
 {% assign email = site.data.socials.email %}
 
+{% include cv_download.liquid pdf='/assets/cv/Longhao_Qian_CV_ZH.pdf' label='下载PDF简历' %}
+
 ## 个人信息
 
 <table class="table table-sm table-borderless">
