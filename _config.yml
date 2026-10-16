@@ -3,22 +3,22 @@
 # -----------------------------------------------------------------------------
 
 title: blank # the website title (if blank, full name will be used instead)
-first_name: You
-middle_name: R.
-last_name: Name
+first_name: Longhao
+middle_name:
+last_name: Qian
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
-description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  Feel free to reach out by email.
+description: >- # ">-" joins the lines and drops the trailing newline (keeps the schema.org JSON valid)
+  Longhao Qian (潜龙昊) — Postdoctoral Researcher at the University of Toronto Institute for Aerospace Studies (UTIAS),
+  working on aerial embodied intelligence, reinforcement learning, and physics-informed neural control for drones and robots.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
-lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+keywords: Longhao Qian, 潜龙昊, UAV, drones, aerial robotics, aerial manipulation, embodied AI, reinforcement learning, physics-informed neural networks, nonlinear control, University of Toronto, UTIAS
+lang: en # the default language of the site; Chinese pages set `lang: zh-CN` in their front matter (see _includes/header.liquid)
+icon: 🚁 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: https://LonghaoQian.github.io # the base hostname & protocol for your site
+url: https://longhaoqian.github.io # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
@@ -98,9 +98,9 @@ max_width: 930px
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
 # see https://schema.org/docs/faq.html for more information
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
-serve_schema_org: false # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
+serve_schema_org: true # Include Schema.org in the HTML head
+og_image: https://longhaoqian.github.io/assets/img/prof_pic.jpg # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -159,17 +159,13 @@ disqus_shortname: al-folio # put your disqus shortname
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
 # Optional: Set default categories and tags for posts from each source.
-external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
-    categories: [external-posts]
-    tags: [medium]
-  - name: Google Blog
-    posts:
-      - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
-        published_date: 2024-05-14
-    categories: [external-posts]
-    tags: [google]
+external_sources: []
+# Example:
+# external_sources:
+#   - name: medium.com
+#     rss_url: https://medium.com/@your-handle/feed
+#     categories: [external-posts]
+#     tags: [medium]
 
 # -----------------------------------------------------------------------------
 # Newsletter
@@ -239,6 +235,40 @@ exclude:
   - gems/
   - migrations/
   - vendor
+  # Private / repo-only files: never publish these
+  - CV/
+  - record.md
+  - AGENTS.md
+  - CLAUDE.md
+  # al-folio template demo content that is not used by this site.
+  # Delete the files themselves (see the list below) and then remove this block.
+  - _posts/
+  - _news/
+  - _books/
+  - _teachings/
+  - _projects/[0-9]_project.md
+  - _pages/blog.md
+  - _pages/books.md
+  - _pages/dropdown.md
+  - _pages/news.md
+  - _pages/plugins.md
+  - _pages/profiles.md
+  - _pages/repositories.md
+  - assets/audio/
+  - assets/bibliography/
+  - assets/html/
+  - assets/json/
+  - assets/jupyter/
+  - assets/pdf/
+  - assets/plotly/
+  - assets/video/
+  - assets/img/book_covers/
+  - assets/img/publication_preview/
+  - assets/img/[0-9]*.jpg
+  - assets/img/prof_pic_color.png
+  - assets/img/rhino.png
+  - assets/img/template_error.png
+  - assets/rendercv/rendercv_output/
 keep_files:
   - CNAME
   - .nojekyll
@@ -341,8 +371,8 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Qian]
+  first_name: [Longhao, L.]
 
   style: apa
   locale: en
@@ -398,6 +428,7 @@ filtered_bibtex_keywords:
     poster,
     preview,
     selected,
+    status,
     slides,
     supp,
     video,
@@ -405,7 +436,7 @@ filtered_bibtex_keywords:
   ]
 
 # Maximum number of authors to be shown for each publication (more authors are visible on click)
-max_author_limit: 3 # leave blank to always show all authors
+max_author_limit: # leave blank to always show all authors
 more_authors_animation_delay: 10 # more authors are revealed on click using animation; smaller delay means faster animation
 
 # Enables publication thumbnails. If disabled, none of the publications will display thumbnails, even if specified in the bib entry.

@@ -1,0 +1,75 @@
+# Bilingual teaching record, rendered by _includes/teaching_list.liquid on the teaching and CV pages.
+
+labels:
+  en:
+    terms: "Terms:"
+    language: "Language of instruction:"
+    content: "Course content:"
+    role: "Role:"
+  zh:
+    terms: 课程时间：
+    language: 授课语言：
+    content: 授课内容：
+    role: 授课身份：
+
+courses:
+  - code: AER1202
+    url: https://aer1202-f26-n38cwhl03a.pages.dev/
+    en:
+      title: Advanced Flight Mechanics
+      institution: University of Toronto
+      terms: 2025/09 – 2025/12; 2026/09 – 2026/12 (as UTIAS staff)
+      language: English
+      content: >-
+        A graduate course at the University of Toronto Institute for Aerospace Studies. The course covers the principles of
+        advanced flight mechanics, flight dynamics modeling and analysis, modern flight control system design, and flight
+        simulation methods.
+      role: In 2026, I teach this course as the lead instructor, as a UTIAS staff member.
+      link_text: Course website (with YouTube lecture videos)
+    zh:
+      title: 高等飞行力学
+      institution: University of Toronto（多伦多大学）
+      terms: 2025/09至2025/12；2026/09至2026/12（UTIAS正式员工）
+      language: 英语
+      content: 该课程为加拿大多伦多大学航空航天学院研究生课程。课程涵盖高等飞行力学原理、飞行动力学建模与分析、现代飞行控制系统设计及飞行仿真方法。
+      role: 2026年作为UTIAS正式员工主讲本课程。
+      link_text: 课程网站（含YouTube授课视频）
+
+  - code: AER1216
+    url: https://www.youtube.com/watch?v=j3kEUmFUQj0&list=PLGJ05aPUKXH-N4BmKoZbNWAvae9uoZKkC
+    en:
+      title: Fundamentals of Unmanned Aerial Vehicles
+      institution: University of Toronto
+      terms: 2023/09 – 2023/12; 2024/09 – 2024/12
+      language: English
+      content: >-
+        A graduate course at the University of Toronto Institute for Aerospace Studies. The course covers UAV dynamics,
+        flight mechanics, automatic control, and hardware and software design.
+      link_text: Lecture videos (YouTube)
+    zh:
+      title: 无人飞行器基础
+      institution: University of Toronto（多伦多大学）
+      terms: 2023/09至2023/12；2024/09至2024/12
+      language: 英语
+      content: 该课程为加拿大多伦多大学航空航天学院研究生课程。课程涉及无人机动力学、飞行力学、自动控制以及软硬件设计。
+      link_text: 授课视频（YouTube）
+
+  - code: AER1217
+    url: https://www.youtube.com/watch?v=_hduPcUh9MI&list=PLGJ05aPUKXH8f8shmWnLCgvXcRrgUY2hS
+    en:
+      title: Autonomy of UAS
+      institution: University of Toronto
+      terms: 2024/01 – 2024/04; 2025/01 – 2025/04
+      language: English
+      content: >-
+        A graduate course at the University of Toronto Institute for Aerospace Studies. The course covers the design of
+        autonomous UAV systems, path planning and decision-making algorithms, state estimation and sensor fusion, and
+        autonomous flight software architecture.
+      link_text: Lecture videos (YouTube)
+    zh:
+      title: 无人机系统自主技术
+      institution: University of Toronto（多伦多大学）
+      terms: 2024/01至2024/04；2025/01至2025/04
+      language: 英语
+      content: 该课程为加拿大多伦多大学航空航天学院研究生课程。课程涉及无人机自主系统设计、路径规划与决策算法、状态估计与传感器融合，以及自主飞行软件架构。
+      link_text: 授课视频（YouTube）

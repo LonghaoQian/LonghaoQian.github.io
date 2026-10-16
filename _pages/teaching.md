@@ -2,14 +2,10 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Course materials, schedules, and resources for classes taught.
+description: Graduate courses taught at the University of Toronto Institute for Aerospace Studies.
 nav: true
-nav_order: 6
-calendar: true
+nav_order: 4
+lang: en
 ---
 
-This page displays a collection of courses with detailed schedules, materials, and resources. You can organize your courses by years, terms, or topics.
-
-{% include calendar.liquid calendar_id='test@gmail.com' timezone='Asia/Shanghai' %}
-
-{% include courses.liquid %}
+{% include teaching_list.liquid lang=page.lang %}

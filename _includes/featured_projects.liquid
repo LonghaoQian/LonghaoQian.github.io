@@ -1,0 +1,26 @@
+{% comment %}
+  Cards for the projects marked `featured: true`, in the current page's language, ordered by `importance`.
+  Usage: {% include featured_projects.liquid heading='featured projects' url='/projects/' %}
+{% endcomment %}
+{%- assign featured_projects = site.projects | where: 'lang', page.lang | where: 'featured', true | sort: 'importance' -%}
+{%- if featured_projects.size > 0 -%}
+  <div class="featured-projects" style="clear: both">
+    <h2>
+      <a href="{{ include.url | relative_url }}" style="color: inherit">{{ include.heading }}</a>
+    </h2>
+    <style>
+      /* Full project titles are long; keep the cards compact. */
+      .projects .card-title {
+        font-size: 1.15rem;
+        line-height: 1.35;
+      }
+    </style>
+    <div class="projects">
+      <div class="row row-cols-1 row-cols-md-3">
+        {%- for project in featured_projects -%}
+          {% include projects.liquid %}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+{%- endif -%}

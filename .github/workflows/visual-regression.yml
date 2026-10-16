@@ -1,38 +1,10 @@
 name: Visual regression checks
 
+# Disabled for this personal site: this is the al-folio starter's own test suite. It expects the template's
+# demo content and forbids local _includes/_layouts overrides, both of which this site intentionally changes.
+# It can still be run by hand from the Actions tab.
 on:
-  pull_request:
-    branches: [main, master, v1.0-dev]
-    paths:
-      - "_config.yml"
-      - "_data/**"
-      - "_bibliography/**"
-      - "_pages/**"
-      - "_posts/**"
-      - "_projects/**"
-      - "assets/**"
-      - "test/visual/**"
-      - ".github/workflows/visual-regression.yml"
-      - "package.json"
-      - "package-lock.json"
-      - "Gemfile"
-      - "Gemfile.lock"
-  push:
-    branches: [v1.0-dev]
-    paths:
-      - "_config.yml"
-      - "_data/**"
-      - "_bibliography/**"
-      - "_pages/**"
-      - "_posts/**"
-      - "_projects/**"
-      - "assets/**"
-      - "test/visual/**"
-      - ".github/workflows/visual-regression.yml"
-      - "package.json"
-      - "package-lock.json"
-      - "Gemfile"
-      - "Gemfile.lock"
+  workflow_dispatch:
 
 jobs:
   visual-regression:

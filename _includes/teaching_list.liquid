@@ -1,0 +1,39 @@
+{% comment %}
+  Renders the courses in _data/teaching.yml in one language.
+  Usage: {% include teaching_list.liquid lang=page.lang %}   (lang: 'zh-CN' for Chinese, anything else for English)
+{% endcomment %}
+{%- if include.lang == 'zh-CN' -%}{%- assign t_key = 'zh' -%}{%- else -%}{%- assign t_key = 'en' -%}{%- endif -%}
+{%- assign t_labels = site.data.teaching.labels[t_key] -%}
+<div class="teaching-list">
+  {%- for course in site.data.teaching.courses -%}
+    {%- assign c = course[t_key] -%}
+    <div class="course mb-4">
+      <h3>
+        {{ course.code }}
+        {{ c.title }}
+      </h3>
+      <p class="mb-1">
+        <em>{{ c.institution }}</em>
+      </p>
+      <ul>
+        <li>
+          <strong>{{ t_labels.terms }}</strong> {{ c.terms }}
+        </li>
+        <li>
+          <strong>{{ t_labels.language }}</strong> {{ c.language }}
+        </li>
+        <li>
+          <strong>{{ t_labels.content }}</strong> {{ c.content }}
+        </li>
+        {%- if c.role %}
+          <li>
+            <strong>{{ t_labels.role }}</strong> {{ c.role }}
+          </li>
+        {%- endif %}
+        <li>
+          <a href="{{ course.url }}" target="_blank" rel="noopener noreferrer">{{ c.link_text }}</a>
+        </li>
+      </ul>
+    </div>
+  {%- endfor -%}
+</div>

@@ -1,0 +1,27 @@
+# Bilingual profile text. Values are Markdown.
+#   bio:     short introduction on the home pages (_pages/about.md, _pages/zh/about.md)
+#   summary: full professional summary on the CV pages (_pages/cv.md, _pages/zh/cv.md)
+
+en:
+  bio: |
+    I'm a Postdoctoral Researcher at the [University of Toronto Institute for Aerospace Studies (UTIAS)](https://www.utias.utoronto.ca/), working with Prof. Hugh H.T. Liu in the [Flight Systems and Control (FSC) Lab](https://flight.utias.utoronto.ca/). I build intelligent aerial robots: drones and drone-mounted manipulators that can perceive, reason, and physically interact with the world around them.
+
+    My work combines reinforcement learning, physics-informed neural networks with stability guarantees, and vision-language models, and I care about taking these methods out of simulation and onto real flight hardware. Recent projects include VLM-driven aerial grasping, contraction-based neural control, and cooperative drone navigation with UWB and LiDAR.
+
+    Before returning to UTIAS, I spent two years at Huawei as a chip software engineer, developing drivers and positioning algorithms for low-power ranging chips. I received my Ph.D. from UTIAS, where I worked on cooperative payload transportation with multiple drones, and I teach graduate courses on flight mechanics and UAV autonomy.
+  summary: |
+    I received my Ph.D. in aerospace engineering from the University of Toronto, Canada, and I am currently a Postdoctoral Researcher at the University of Toronto, focusing on aerial embodied intelligence for drones and the engineering deployment of AI algorithms. My core expertise spans reinforcement learning (PPO/MADDPG), physics-informed neural networks (PINNs), and multi-vehicle cooperative control, and I have full-stack R&D experience from algorithm design to hardware deployment, including real-time neural-network inference on NVIDIA Jetson Orin, Pixhawk flight-controller integration, and CAN-bus actuator control. I have led several complete projects through to deployment and validation: achieving 15 cm-level tracking accuracy in high-speed flight at 8–12 m/s, and proposing a novel scheduling algorithm for UWB chips that reduced system power consumption by 30%. I previously worked as a chip software engineer at Huawei Technologies Co., Ltd., where I became familiar with the R&D processes and coding standards of a large enterprise, and earned Huawei's Professional-Level C++ Software Competency Certification and the HiSilicon Quality Star Award.
+
+    I have solid team-leadership experience. At the University of Toronto, I have led five R&D teams of 2–6 Ph.D., master's, and undergraduate students, responsible for research planning, defining technical roadmaps, task allocation, and quality control of results, and I have guided these teams to publish in top journals such as JGCD and Science China and at top conferences such as CDC and AIAA SciTech. As lead of the control and visual-navigation subsystems for the A2RL international autonomous drone racing competition, I led the team to 7th place among 22 teams. At Huawei, I served as project lead and software Committer, led the team to complete driver development for a low-power ranging chip, and improved the team's overall capability through regular technical training. I am skilled at coordinating cross-disciplinary R&D teams and efficiently driving the complete R&D cycle from solution design to engineering validation.
+
+zh:
+  bio: |
+    我是[加拿大多伦多大学航空航天研究院（UTIAS）](https://www.utias.utoronto.ca/)博士后研究员，就职于[飞行系统与控制实验室（FSC Lab）](https://flight.utias.utoronto.ca/)，合作导师为刘洪涛教授（Prof. Hugh H.T. Liu）。我致力于研发具备感知、推理与物理交互能力的智能空中机器人，包括无人机及无人机机械臂平台。
+
+    我的研究结合强化学习、具备稳定性保证的物理信息神经网络（PINN）以及视觉语言大模型（VLM），并注重将算法从仿真真正落地到飞行硬件上。近期项目包括基于VLM的空中自主抓取、基于收缩理论的神经网络鲁棒控制，以及基于UWB与激光雷达的无人机协同导航。
+
+    此前，我曾在华为担任芯片软件工程师两年，负责低功耗测距芯片的驱动与定位算法研发。我在UTIAS获得博士学位，博士期间研究多无人机协同负载运输；目前在多伦多大学讲授飞行力学与无人机自主技术方向的研究生课程。
+  summary: |
+    博士毕业于加拿大多伦多大学航空航天工程专业，现为多伦多大学博士后研究员，专注于无人机空中具身智能与AI算法的工程落地。核心能力涵盖强化学习（PPO/MADDPG）、物理信息神经网络（PINNs）及多机协同控制，并具备从算法设计到硬件部署的全链路研发经验，包括在NVIDIA Jetson Orin上的神经网络实时推理部署、Pixhawk飞控集成及CAN总线执行器控制。曾主导多个完整项目的落地验证：在8–12 m/s高速飞行条件下实现15 cm级跟踪精度；提出的UWB芯片新型调度算法使系统功耗降低30%。曾任华为技术有限公司芯片软件工程师，熟悉大型企业研发流程与代码规范，获C++专业级软件能力认证及海思质量之星奖。
+
+    具备扎实的团队领导能力：在多伦多大学先后带领5支2–6人的博士、硕士及本科生研发团队，负责课题规划、技术路线制定、任务分工与成果把关，指导团队成果发表于JGCD、Science China等顶级期刊及CDC、AIAA SciTech等顶级会议；作为A2RL国际无人机竞速赛控制与视觉导航分系统负责人，带领团队在22支队伍中获得第7名；在华为担任项目负责人与软件Committer，领导团队完成低功耗测距芯片驱动开发，并通过定期技术培训提升团队整体能力。善于协调跨方向研发团队，能够高效推动从方案设计到工程验证的完整研发周期。
