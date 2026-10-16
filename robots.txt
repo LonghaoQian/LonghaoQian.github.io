@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://LonghaoQian.github.io/sitemap.xml
+Sitemap: https://longhaoqian.github.io/sitemap.xml
