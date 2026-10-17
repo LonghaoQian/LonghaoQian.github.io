@@ -5,7 +5,6 @@ description: "基于可观性Gramian矩阵的长僚机编队定位与导航：�
 lang: zh-CN
 permalink: /zh/research/uwb-lidar-formation-flight/
 category: 科研项目
-featured: true # shown on the home page
 importance: 3
 cv_group: utias-postdoc
 period: "2025/08至2026/03"

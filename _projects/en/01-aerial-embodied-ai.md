@@ -9,9 +9,37 @@ featured: true # shown on the home page
 importance: 1
 cv_group: utias-postdoc
 period: "2025/10 – present"
+img: assets/img/projects/arm-isaac-thumb.jpg
+card_img: assets/img/projects/arm-isaac-model.jpg # home-page card only
+card_video: assets/video/arm-flight-card.mp4 # home-page card only
+card_video_poster: assets/img/projects/arm-flight-card-poster.jpg
 ---
 
 **Period:** 2025/10 – present · University of Toronto Institute for Aerospace Studies
+
+<blockquote class="block-tip">
+  <p>
+    <strong>Ongoing project.</strong> We have made significant improvements in manipulation. Vision-based object localization and LLM control have
+    both been tested, and we are now running experiments to close the remaining gap to fully autonomous grasping in flight.
+  </p>
+</blockquote>
+
+<div class="row mt-3">
+  <div class="col-sm mt-3 mt-md-0">
+    <figure>
+      <video
+        src="{{ 'assets/video/arm-flight.mp4' | relative_url }}"
+        poster="{{ 'assets/img/projects/arm-flight-poster.jpg' | relative_url }}"
+        class="img-fluid rounded z-depth-1"
+        autoplay
+        loop
+        muted
+        playsinline
+      ></video>
+    </figure>
+  </div>
+</div>
+<div class="caption">Flight experiment: the drone-manipulator flying with its arm and gripper deployed in the indoor flight arena.</div>
 
 <!-- details -->
 
@@ -21,3 +49,155 @@ period: "2025/10 – present"
 - Using XM430-W350 joint actuators, designed FOC (field-oriented control) current-loop control, improving torque actuation accuracy by about 20% in torque-control mode and laying the foundation for improving overall object-manipulation accuracy.
 - Using a RealSense depth camera and running YOLOv8 with Ultralytics, combined RGB object detection with depth information to achieve autonomous target recognition and localization, with centimeter-level localization accuracy for static targets.
 - Deployed the Qwen2.5-VL-7B large model locally on a ground-station computer equipped with an RTX 4070. The drone connects to the ground control station over a P2P network, which obtains the motion states of the drone and the manipulator in real time. By recognizing objects in camera images and invoking the precise localization results of the RealSense depth-camera module, the large model enables a fully autonomous environment-interaction system for the aerial embodied platform. The large model invokes the embodied control framework proposed in this research to command the drone to grasp and place objects, realizing a closed-loop physical-AI expert system centered on a large model.
+
+<!-- end details -->
+
+## Sim-to-real with Isaac Sim
+
+<div class="row">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/projects/arm-sim2real-framework.jpg" alt="Sim-to-real iteration framework" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">The sim-to-real iteration loop: measured data, high-fidelity simulation, parallel RL training, flight experiments, and back again.</div>
+
+1. **Measured data.** Motor speed and thrust are measured on a test stand and fitted against throttle. Together with the CAD model, they set the
+   parameters of the simulation.
+2. **High-fidelity simulation.** The CAD design is exported from Onshape to USD and imported into NVIDIA Isaac Sim with the PhysX engine. A ROS 2
+   interface reads the ground truth and sets the joint efforts, so the same control code runs in simulation and on the vehicle.
+3. **Parallel RL training.** A PPO control-correction policy is trained in Isaac Lab across many parallel environments, with domain randomization over
+   effects that are hard to model, such as aerodynamic drag and propeller downwash, to narrow the sim-to-real gap.
+4. **Experimental validation.** The controller and the policy fly on the real platform, and the flight data feeds the next iteration.
+
+<div class="row">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/projects/arm-isaac-model.jpg" alt="Drone-manipulator model in Isaac Sim" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/projects/arm-hardware.jpg" alt="Drone-manipulator hardware" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+  The same drone-manipulator in Isaac Sim (left) and as hardware (right), with the Intel RealSense D435i depth camera and the robotic arm under the
+  airframe.
+</div>
+
+<div class="row">
+  <div class="col-sm-4 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/projects/arm-test-stand.jpg" alt="Motor and propeller test stand" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm-8 mt-3 mt-md-0 d-flex align-items-center">
+    {% include figure.liquid path="assets/img/projects/arm-thrust-curves.png" alt="Measured motor speed and thrust versus throttle" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">Test-stand measurements of motor speed and thrust against throttle, used to calibrate the simulation.</div>
+
+<div class="row">
+  <div class="col-sm-8 mx-auto mt-3 mt-md-0">
+    <figure>
+      <video
+        src="{{ 'assets/video/arm-isaac-takeoff.mp4' | relative_url }}"
+        poster="{{ 'assets/img/projects/arm-isaac-takeoff-poster.jpg' | relative_url }}"
+        class="img-fluid rounded z-depth-1"
+        autoplay
+        loop
+        muted
+        playsinline
+      ></video>
+    </figure>
+  </div>
+</div>
+<div class="caption">Isaac Sim: the drone-manipulator taking off, with ground contact simulated.</div>
+
+## Flight experiments
+
+The flight at the top of this page shows the platform in the indoor flight arena. Key results from the experiments:
+
+- **3–4 cm average error** in dynamic object manipulation, using the L1 adaptive control framework.
+- **400 Hz control from the NVIDIA Jetson Orin**, which drives the propellers and the arm directly through low-latency UDP over Ethernet to the flight
+  control unit.
+- **About 20% better torque accuracy** in the XM430-W350 joints with field-oriented (FOC) current-loop control.
+- **Centimeter-level localization** of static targets from the RealSense depth camera and YOLOv8.
+
+## LLM and VLM in the loop
+
+<style>
+  .llm-flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+  .llm-flow > div {
+    border: 1px solid rgba(127, 127, 127, 0.45);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.35;
+  }
+  .llm-flow > span {
+    opacity: 0.6;
+  }
+</style>
+
+<div class="llm-flow">
+  <div><strong>Instruction</strong><br>natural language</div>
+  <span>→</span>
+  <div><strong>Qwen2.5-7B</strong><br>language to task</div>
+  <span>→</span>
+  <div><strong>Qwen2.5-VL-7B</strong><br>finds the target in the image</div>
+  <span>→</span>
+  <div><strong>RealSense + YOLOv8</strong><br>3D target position</div>
+  <span>→</span>
+  <div><strong>L1 adaptive control</strong><br>400 Hz on Jetson Orin</div>
+  <span>→</span>
+  <div><strong>Grasp and place</strong></div>
+</div>
+
+1. **Language.** Qwen2.5-7B turns a natural-language instruction into a task for the drone.
+2. **Vision.** Qwen2.5-VL-7B recognizes the target object in the camera image.
+3. **Localization.** The RealSense depth camera and YOLOv8 give the target's 3D position for pre-grasp positioning.
+4. **Control.** The embodied control framework flies the drone and the arm to grasp the object and place it.
+
+Qwen2.5-VL-7B runs locally on a ground-station computer with an RTX 4070. The drone connects to the ground station over a peer-to-peer network that
+streams the drone and arm states in real time, which closes the loop around the large model.
+
+**Status.** Vision-based object localization and LLM control have both been tested; experiments to connect them into fully autonomous grasping in
+flight are under way.
+
+<div class="row">
+  <div class="col-sm mt-3 mt-md-0">
+    <figure>
+      <video
+        src="{{ 'assets/video/arm-bottle-localization.mp4' | relative_url }}"
+        poster="{{ 'assets/img/projects/arm-bottle-localization-poster.jpg' | relative_url }}"
+        class="img-fluid rounded z-depth-1"
+        autoplay
+        loop
+        muted
+        playsinline
+      ></video>
+    </figure>
+  </div>
+</div>
+<div class="caption">
+  Vision localization baseline in flight (30 s excerpt). The RealSense camera detects a bottle (right); its depth is projected into the world frame
+  through the calibrated camera mount, using the drone pose from motion capture. The running-median estimate (star) settles at a fixed position while
+  the drone moves (left).
+</div>
+
+## The team
+
+<div class="row">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/projects/arm-team.jpg" alt="The project team with the drone-manipulator in the flight arena" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+  The team in the flight arena with the drone-manipulator. From left: Ph.D. students
+  <a href="https://flight.utias.utoronto.ca/index.php/enoch-lo">Enoch Lo</a>,
+  <a href="https://flight.utias.utoronto.ca/index.php/keilan-pieper">Keilan Pieper</a> and Shiqi Gao, and Longhao Qian.
+</div>

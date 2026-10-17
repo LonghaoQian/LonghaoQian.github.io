@@ -1,26 +1,101 @@
 {% comment %}
-  Cards for the projects marked `featured: true`, in the current page's language, ordered by `importance`.
+  The projects marked `featured: true`, in the current page's language, as a single column, newest first.
+  Sorted by the `period` string in reverse: "YYYY/MM" start dates sort chronologically, and for equal start dates an ongoing project
+  ("present" / "至今") sorts ahead of a finished one.
+  Optional front matter: `img` (4:3 thumbnail), `card_img` (replaces `img` on this card and keeps its own shape), and
+  `card_video` / `card_video_poster` (a short muted loop shown under the image). `card_img` or `card_video` widens the media column.
   Usage: {% include featured_projects.liquid heading='featured projects' url='/research/' %}
 {% endcomment %}
-{%- assign featured_projects = site.projects | where: 'lang', page.lang | where: 'featured', true | sort: 'importance' -%}
+{%- assign featured_projects = site.projects | where: 'lang', page.lang | where: 'featured', true | sort: 'period' | reverse -%}
 {%- if featured_projects.size > 0 -%}
   <div class="featured-projects" style="clear: both">
     <h2>
       <a href="{{ include.url | relative_url }}" style="color: inherit">{{ include.heading }}</a>
     </h2>
     <style>
-      /* Full project titles are long; keep the cards compact. */
-      .projects .card-title {
+      .featured-list > a {
+        display: block;
+        color: inherit;
+      }
+      .featured-list .featured-item {
+        display: flex;
+        gap: 1.25rem;
+        align-items: flex-start;
+      }
+      .featured-list .featured-thumb {
+        flex: 0 0 170px;
+      }
+      .featured-list .featured-thumb.wide {
+        flex-basis: 280px;
+      }
+      .featured-list .featured-thumb img,
+      .featured-list .featured-thumb video {
+        display: block;
+        width: 100%;
+        border-radius: 0.25rem;
+      }
+      .featured-list .featured-thumb img:not(.natural) {
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+      }
+      .featured-list .featured-thumb > * + * {
+        margin-top: 0.5rem;
+      }
+      .featured-list .card-title {
         font-size: 1.15rem;
         line-height: 1.35;
+        margin-bottom: 0.25rem;
+      }
+      .featured-list .featured-period {
+        font-size: 0.875rem;
+        opacity: 0.7;
+        margin-bottom: 0.5rem;
+      }
+      @media (max-width: 575.98px) {
+        .featured-list .featured-item {
+          flex-direction: column;
+        }
+        .featured-list .featured-thumb {
+          flex-basis: auto;
+          width: 100%;
+        }
       }
     </style>
-    <div class="projects">
-      <div class="row row-cols-1 row-cols-md-3">
-        {%- for project in featured_projects -%}
-          {% include projects.liquid %}
-        {%- endfor -%}
-      </div>
+    <div class="featured-list">
+      {%- for project in featured_projects -%}
+        <a href="{{ project.url | relative_url }}" class="mb-3">
+          <div class="card hoverable">
+            <div class="card-body featured-item">
+              {%- if project.img or project.card_img or project.card_video -%}
+                <div class="featured-thumb{% if project.card_img or project.card_video %} wide{% endif %}">
+                  {%- if project.card_img -%}
+                    <img src="{{ project.card_img | relative_url }}" alt="" loading="lazy" class="natural">
+                  {%- elsif project.img -%}
+                    <img src="{{ project.img | relative_url }}" alt="" loading="lazy">
+                  {%- endif -%}
+                  {%- if project.card_video -%}
+                    <video
+                      src="{{ project.card_video | relative_url }}"
+                      {% if project.card_video_poster %}
+                        poster="{{ project.card_video_poster | relative_url }}"
+                      {% endif %}
+                      autoplay
+                      loop
+                      muted
+                      playsinline
+                    ></video>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+              <div>
+                <h3 class="card-title">{{ project.title }}</h3>
+                <div class="featured-period">{{ project.period }}</div>
+                <p class="card-text">{{ project.description }}</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      {%- endfor -%}
     </div>
   </div>
 {%- endif -%}

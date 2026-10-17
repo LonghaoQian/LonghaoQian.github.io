@@ -15,14 +15,14 @@ This fork is no longer a generic starter: it is the live personal site at https:
 - **Never publish** date of birth, place of birth / 户籍, or gender — not on pages, in PDFs, in commits, or in commit messages. Before every push, search the built site and `assets/cv/*.pdf` for `户籍`, `出生`, `性别`, `birth`, `gender`, and for the birth year and month as written in the private CV in `CV/` (never copy those values into any tracked file).
 - **No career-objectives section** (`Career objectives` / `求职意向`) anywhere on the site or in the downloadable PDFs.
 - **CV content is reproduced faithfully and in full.** Do not shorten or drop experience bullets on the CV and project pages. Chinese text is the CV's own wording; English is a complete translation.
-- **Home page** (`/` and `/zh/`) = short bio (`_data/profile.yml` → `bio`) + featured projects (VLM, PINN, LiDAR) + contact icons. No publication list there.
+- **Home page** (`/` and `/zh/`) = short bio (`_data/profile.yml` → `bio`) + featured projects (one column, newest first: VLM arm, PINN/CCM, counter-UAV RL, A2RL, Ph.D. slung load) + contact icons. No publication list there.
 - The source CV (`CV/`, a Word file plus the original photo) holds the private fields. It is gitignored and excluded from the build; keep it that way.
 
 ### How the site is put together
 
 - **Bilingual:** every page exists in English (`lang: en`) and Chinese (`lang: zh-CN`, under `/zh/`), with mirrored URLs (`/x/` ↔ `/zh/x/`). The language switch and the language-filtered menu live in the local overrides `_includes/header.liquid` and `_layouts/default.liquid`. After editing either file, run `bundle exec al-folio upgrade overrides accept <path>` and commit `.al-folio-overrides.yml`.
-- **Menu order:** about, publications (`nav_order` 2), research (3), industrial experience (4), teaching (5), CV (6).
-- **Projects:** `_projects/en/` and `_projects/zh/`. `category` selects the page (`research` / `competition` → `/research/`; `industry` → `/industry/`), `featured: true` puts a card on the home page, and `cv_group` embeds the project text in the CV pages. Anything after `<!-- details -->` is what the CV shows. Edit a project in both languages.
+- **Menu order:** about, publications (`nav_order` 2), research (3), industrial experience (4), teaching (5), tutorials (6), CV (7).
+- **Projects:** `_projects/en/` and `_projects/zh/`. `category` selects the page (`research` / `competition` → `/research/`; `industry` → `/industry/`), `featured: true` lists it on the home page (sorted by `period`, newest first), and `cv_group` embeds the project text in the CV pages. The CV shows what lies between `<!-- details -->` and the optional `<!-- end details -->` (or the end of the file). Put media above `<!-- details -->` and deep-dive content such as equations after `<!-- end details -->`, so neither reaches the CV or its PDFs. Edit a project in both languages.
 - **Shared text:** `_data/profile.yml` (bio for the home page; full summary for the CV pages) and `_data/teaching.yml` (rendered by `_includes/teaching_list.liquid`).
 - **Publications:** `_bibliography/papers.bib` (English notes) and `papers_zh.bib` (Chinese notes) must stay identical apart from the `note` field. Only add a `doi` or `arxiv` value after checking it against Crossref or arXiv.
 - **Downloadable CVs:** `assets/cv/Longhao_Qian_CV_EN.pdf` and `Longhao_Qian_CV_ZH.pdf`. Regenerate both whenever the CV text or any project URL changes:

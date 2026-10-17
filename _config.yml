@@ -261,7 +261,6 @@ exclude:
   - assets/jupyter/
   - assets/pdf/
   - assets/plotly/
-  - assets/video/
   - assets/img/book_covers/
   - assets/img/publication_preview/
   - assets/img/[0-9]*.jpg

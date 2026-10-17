@@ -5,7 +5,6 @@ description: "Observability-Gramian-aware leader–follower formation flight whe
 lang: en
 permalink: /research/uwb-lidar-formation-flight/
 category: research
-featured: true # shown on the home page
 importance: 3
 cv_group: utias-postdoc
 period: "2025/08 – 2026/03"

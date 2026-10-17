@@ -1,0 +1,16 @@
+{% comment %}
+  Full-width 16:9 YouTube embed (the theme's video.liquid leaves iframes at the browser default of 300x150).
+  Usage: {% include youtube.liquid id='wbbXhoLE8n4' title='FSC CMake Tutorial Lecture 1-Part1' %}
+{% endcomment %}
+<figure>
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/{{ include.id }}"
+    title="{{ include.title | escape }}"
+    class="rounded z-depth-1"
+    style="width: 100%; aspect-ratio: 16 / 9; border: 0"
+    loading="lazy"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+  ></iframe>
+</figure>

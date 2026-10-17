@@ -4,7 +4,7 @@ permalink: /cv/
 title: CV
 description: Curriculum vitae. The project descriptions below are the same as on the research and industrial experience pages.
 nav: true
-nav_order: 6
+nav_order: 7
 lang: en
 toc:
   sidebar: left
@@ -49,7 +49,7 @@ toc:
 
 _{{ p.period }}_
 
-{{ p.content | split: '<!-- details -->' | last }}
+{{ p.content | split: '<!-- details -->' | last | split: '<!-- end details -->' | first }}
 {% endfor %}
 
 ### Chip Software Engineer — Huawei Technologies Co., Ltd.
@@ -60,7 +60,7 @@ _{{ p.period }}_
 
 {% assign cv_projects = site.projects | where: "lang", page.lang | where: "cv_group", "huawei" %}
 {% for p in cv_projects %}
-{{ p.content | split: '<!-- details -->' | last }}
+{{ p.content | split: '<!-- details -->' | last | split: '<!-- end details -->' | first }}
 {% endfor %}
 
 ### Ph.D. — University of Toronto, Institute for Aerospace Studies
@@ -73,7 +73,7 @@ _{{ p.period }}_
 
 {% assign cv_projects = site.projects | where: "lang", page.lang | where: "cv_group", "utias-phd" %}
 {% for p in cv_projects %}
-{{ p.content | split: '<!-- details -->' | last }}
+{{ p.content | split: '<!-- details -->' | last | split: '<!-- end details -->' | first }}
 {% endfor %}
 
 ### Software Algorithm R&D Engineer (remote) — CNTech, Zhongfang Intelligent Technology (Shanghai) Co., Ltd.
@@ -84,7 +84,7 @@ _{{ p.period }}_
 
 {% assign cv_projects = site.projects | where: "lang", page.lang | where: "cv_group", "cntech" %}
 {% for p in cv_projects %}
-{{ p.content | split: '<!-- details -->' | last }}
+{{ p.content | split: '<!-- details -->' | last | split: '<!-- end details -->' | first }}
 {% endfor %}
 
 ## Education

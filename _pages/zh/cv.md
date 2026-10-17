@@ -4,7 +4,7 @@ permalink: /zh/cv/
 title: 个人简历
 description: 个人简历。以下项目介绍与“科研项目”和“工业界经历”页面内容一致。
 nav: true
-nav_order: 6
+nav_order: 7
 lang: zh-CN
 toc:
   sidebar: left
@@ -49,7 +49,7 @@ toc:
 
 _{{ p.period }}_
 
-{{ p.content | split: '<!-- details -->' | last }}
+{{ p.content | split: '<!-- details -->' | last | split: '<!-- end details -->' | first }}
 {% endfor %}
 
 ### 芯片软件工程师 — 华为技术有限公司
@@ -60,7 +60,7 @@ _{{ p.period }}_
 
 {% assign cv_projects = site.projects | where: "lang", page.lang | where: "cv_group", "huawei" %}
 {% for p in cv_projects %}
-{{ p.content | split: '<!-- details -->' | last }}
+{{ p.content | split: '<!-- details -->' | last | split: '<!-- end details -->' | first }}
 {% endfor %}
 
 ### 博士 — University of Toronto, Institute for Aerospace Studies（多伦多大学航空航天研究院）
@@ -73,7 +73,7 @@ _{{ p.period }}_
 
 {% assign cv_projects = site.projects | where: "lang", page.lang | where: "cv_group", "utias-phd" %}
 {% for p in cv_projects %}
-{{ p.content | split: '<!-- details -->' | last }}
+{{ p.content | split: '<!-- details -->' | last | split: '<!-- end details -->' | first }}
 {% endfor %}
 
 ### 软件算法研发工程师（远程） — 中仿智能科技（上海）股份有限公司
@@ -84,7 +84,7 @@ _{{ p.period }}_
 
 {% assign cv_projects = site.projects | where: "lang", page.lang | where: "cv_group", "cntech" %}
 {% for p in cv_projects %}
-{{ p.content | split: '<!-- details -->' | last }}
+{{ p.content | split: '<!-- details -->' | last | split: '<!-- end details -->' | first }}
 {% endfor %}
 
 ## 教育经历
