@@ -36,7 +36,7 @@ toc:
 
 ### Postdoctoral Researcher — University of Toronto, Institute for Aerospace Studies
 
-**2025/11 – present** · [www.utias.utoronto.ca](https://www.utias.utoronto.ca/) · Lab: [Flight Systems and Control (FSC) Lab](https://flight.utias.utoronto.ca/) · 4925 Dufferin St, North York, ON M3H 5T6, Canada
+**2023/04 – present** · [www.utias.utoronto.ca](https://www.utias.utoronto.ca/) · Lab: [Flight Systems and Control (FSC) Lab](https://flight.utias.utoronto.ca/) · 4925 Dufferin St, North York, ON M3H 5T6, Canada
 
 **Supervisor:** Dr. Hugh H.T. Liu — Fellow of the Canadian Academy of Engineering; Professor and Ph.D. supervisor at the University of Toronto Institute for Aerospace Studies; Director of the University of Toronto Centre for Aerial Robotics Research and Education.
 

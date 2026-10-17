@@ -7,10 +7,10 @@ permalink: /zh/research/5g-aerial-security/
 category: 科研项目
 importance: 6
 cv_group: utias-postdoc
-period: "2023/04至2026/03"
+period: "2023/05至2026/03"
 ---
 
-**时间：** 2023/04至2026/03 · 多伦多大学航空航天研究院
+**时间：** 2023/05至2026/03 · 多伦多大学航空航天研究院
 
 <!-- details -->
 

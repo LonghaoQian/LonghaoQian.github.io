@@ -7,10 +7,10 @@ permalink: /research/5g-aerial-security/
 category: research
 importance: 6
 cv_group: utias-postdoc
-period: "2023/04 – 2026/03"
+period: "2023/05 – 2026/03"
 ---
 
-**Period:** 2023/04 – 2026/03 · University of Toronto Institute for Aerospace Studies
+**Period:** 2023/05 – 2026/03 · University of Toronto Institute for Aerospace Studies
 
 <!-- details -->
 

@@ -36,7 +36,7 @@ toc:
 
 ### 博士后研究员 — University of Toronto, Institute for Aerospace Studies（多伦多大学航空航天研究院）
 
-**2025/11至今** · 网站：[https://www.utias.utoronto.ca/](https://www.utias.utoronto.ca/) · 实验室：[飞行系统与控制实验室（FSC Lab）](https://flight.utias.utoronto.ca/) · 地址：4925 Dufferin St, North York, ON M3H 5T6, Canada
+**2023/04至今** · 网站：[https://www.utias.utoronto.ca/](https://www.utias.utoronto.ca/) · 实验室：[飞行系统与控制实验室（FSC Lab）](https://flight.utias.utoronto.ca/) · 地址：4925 Dufferin St, North York, ON M3H 5T6, Canada
 
 **导师：** Dr. Hugh H.T. Liu（刘洪涛教授），加拿大皇家工程院院士。加拿大多伦多大学航空航天学院教授、博导。多伦多大学空中机器人研究与教育中心主任。
 
