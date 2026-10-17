@@ -12,7 +12,7 @@ This fork is no longer a generic starter: it is the live personal site at https:
 
 ### Content and privacy rules (the repo and the site are public)
 
-- **Never publish** date of birth, place of birth / 户籍, or gender — not on pages, in PDFs, in commits, or in commit messages. Before every push, search the built site and `assets/cv/*.pdf` for `1990`, `户籍`, `出生`, `性别`, `birth`, `gender`.
+- **Never publish** date of birth, place of birth / 户籍, or gender — not on pages, in PDFs, in commits, or in commit messages. Before every push, search the built site and `assets/cv/*.pdf` for `户籍`, `出生`, `性别`, `birth`, `gender`, and for the birth year and month as written in the private CV in `CV/` (never copy those values into any tracked file).
 - **No career-objectives section** (`Career objectives` / `求职意向`) anywhere on the site or in the downloadable PDFs.
 - **CV content is reproduced faithfully and in full.** Do not shorten or drop experience bullets on the CV and project pages. Chinese text is the CV's own wording; English is a complete translation.
 - **Home page** (`/` and `/zh/`) = short bio (`_data/profile.yml` → `bio`) + featured projects (VLM, PINN, LiDAR) + contact icons. No publication list there.
@@ -27,7 +27,7 @@ This fork is no longer a generic starter: it is the live personal site at https:
 - **Publications:** `_bibliography/papers.bib` (English notes) and `papers_zh.bib` (Chinese notes) must stay identical apart from the `note` field. Only add a `doi` or `arxiv` value after checking it against Crossref or arXiv.
 - **Downloadable CVs:** `assets/cv/Longhao_Qian_CV_EN.pdf` and `Longhao_Qian_CV_ZH.pdf`. Regenerate both whenever the CV text or any project URL changes:
   - **English:** print `/cv/` to PDF (Letter, no browser headers or footers). The print styles in `_includes/cv_download.liquid` hide the menu and sidebar. Print from the live site, or from a local build with `<base href="https://longhaoqian.github.io/cv/">` injected, so links point at the live site rather than localhost.
-  - **Chinese:** start from a copy of the Word CV. Delete the 男 / 1990年12月生 / 户籍 / 上海 cells and the 求职意向 section, then save as PDF. Word on Windows has the right fonts. On Linux, the Word file's embedded font subsets lose characters, so strip the embedded fonts and map YaHei/SimSun/Calibri to Noto CJK SC / Carlito before converting with LibreOffice.
+  - **Chinese:** start from a copy of the Word CV. Delete the gender, date-of-birth and 户籍 cells (labels and values) and the 求职意向 section, then save as PDF. Word on Windows has the right fonts. On Linux, the Word file's embedded font subsets lose characters, so strip the embedded fonts and map YaHei/SimSun/Calibri to Noto CJK SC / Carlito before converting with LibreOffice.
   - **Check** every PDF's text for the private fields listed above before committing.
 
 ### Workflow
