@@ -6,6 +6,38 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 The import above (`AGENTS.md`, which itself defers to `.github/copilot-instructions.md` and `docs/BOUNDARIES.md`) is the canonical short entry point: ownership boundaries, the validated command set, and PR-routing rules. Keep `AGENTS.md` short and ecosystem-neutral — put Claude-specific or longer-form guidance here instead. Everything below is the cross-repo "big picture" that those files assume but don't spell out.
 
+## This site: Longhao Qian's personal page (read this first)
+
+This fork is no longer a generic starter: it is the live personal site at https://longhaoqian.github.io/ (GitHub Pages, deployed by `.github/workflows/deploy.yml` on every push to `main`). It is served at the domain root (`baseurl: ""`), so ignore the `/al-folio` paths in the generic notes further down. The site is used both for job hunting and as a research demo.
+
+### Content and privacy rules (the repo and the site are public)
+
+- **Never publish** date of birth, place of birth / 户籍, or gender — not on pages, in PDFs, in commits, or in commit messages. Before every push, search the built site and `assets/cv/*.pdf` for `1990`, `户籍`, `出生`, `性别`, `birth`, `gender`.
+- **No career-objectives section** (`Career objectives` / `求职意向`) anywhere on the site or in the downloadable PDFs.
+- **CV content is reproduced faithfully and in full.** Do not shorten or drop experience bullets on the CV and project pages. Chinese text is the CV's own wording; English is a complete translation.
+- **Home page** (`/` and `/zh/`) = short bio (`_data/profile.yml` → `bio`) + featured projects (VLM, PINN, LiDAR) + contact icons. No publication list there.
+- The source CV (`CV/`, a Word file plus the original photo) holds the private fields. It is gitignored and excluded from the build; keep it that way.
+
+### How the site is put together
+
+- **Bilingual:** every page exists in English (`lang: en`) and Chinese (`lang: zh-CN`, under `/zh/`), with mirrored URLs (`/x/` ↔ `/zh/x/`). The language switch and the language-filtered menu live in the local overrides `_includes/header.liquid` and `_layouts/default.liquid`. After editing either file, run `bundle exec al-folio upgrade overrides accept <path>` and commit `.al-folio-overrides.yml`.
+- **Menu order:** about, publications (`nav_order` 2), research (3), industrial experience (4), teaching (5), CV (6).
+- **Projects:** `_projects/en/` and `_projects/zh/`. `category` selects the page (`research` / `competition` → `/research/`; `industry` → `/industry/`), `featured: true` puts a card on the home page, and `cv_group` embeds the project text in the CV pages. Anything after `<!-- details -->` is what the CV shows. Edit a project in both languages.
+- **Shared text:** `_data/profile.yml` (bio for the home page; full summary for the CV pages) and `_data/teaching.yml` (rendered by `_includes/teaching_list.liquid`).
+- **Publications:** `_bibliography/papers.bib` (English notes) and `papers_zh.bib` (Chinese notes) must stay identical apart from the `note` field. Only add a `doi` or `arxiv` value after checking it against Crossref or arXiv.
+- **Downloadable CVs:** `assets/cv/Longhao_Qian_CV_EN.pdf` and `Longhao_Qian_CV_ZH.pdf`. Regenerate both whenever the CV text or any project URL changes:
+  - **English:** print `/cv/` to PDF (Letter, no browser headers or footers). The print styles in `_includes/cv_download.liquid` hide the menu and sidebar. Print from the live site, or from a local build with `<base href="https://longhaoqian.github.io/cv/">` injected, so links point at the live site rather than localhost.
+  - **Chinese:** start from a copy of the Word CV. Delete the 男 / 1990年12月生 / 户籍 / 上海 cells and the 求职意向 section, then save as PDF. Word on Windows has the right fonts. On Linux, the Word file's embedded font subsets lose characters, so strip the embedded fonts and map YaHei/SimSun/Calibri to Noto CJK SC / Carlito before converting with LibreOffice.
+  - **Check** every PDF's text for the private fields listed above before committing.
+
+### Workflow
+
+- Commit as `Longhao Qian <longhao.qian@mail.utoronto.ca>`.
+- Show changes on a local preview (`docker compose up -d` → http://localhost:8080/) and get the user's OK before pushing. A push to `main` goes live in about 3–5 minutes.
+- Run `npx prettier . --check` before pushing (CI runs it). `record.md` and the Google verification file `google*.html` are in `.prettierignore`; never edit or delete the verification file, which Search Console needs.
+- The template's own test workflows (`unit-tests.yml`, `visual-regression.yml`) are manual-only on purpose: they expect the demo content and forbid local overrides.
+- Template demo content is still in the repo but excluded from the build by a marked block in `_config.yml`. Delete the files, then that block, when convenient.
+
 ## What this repo is
 
 `al-folio` v1.x is a **thin Jekyll starter**, not a theme. It owns only: starter wiring (`Gemfile`, `_config.yml`, `_data/featured_plugins.yml`), example content (`_pages`, `_posts`, `_projects`, `_news`, `_teachings`, `_books`, `_bibliography`), docs (`docs/`), cross-gem integration tests (`test/integration_*.sh`), and visual/parity tests (`test/visual/`). **All runtime, layouts, includes, Sass, tags, filters, and feature JS live in versioned gems**, published independently on RubyGems. `docs/BOUNDARIES.md` is the authoritative area→gem ownership table.
