@@ -26,6 +26,7 @@ toc:
     谷歌学术：<a href="https://scholar.google.ca/citations?hl=en&user=p2oGLVYAAAAJ">scholar.google.ca/citations?user=p2oGLVYAAAAJ</a>
   </td></tr>
   <tr><td><strong>电子邮件</strong></td><td><a href="mailto:{{ email | encode_email }}">{{ email }}</a></td></tr>
+  <tr><td><strong>微信</strong></td><td>werewolf-1</td></tr>
 </table>
 
 ## 个人综合评价
@@ -120,6 +121,10 @@ _{{ p.period }}_
 {% bibliography --file papers_zh --group_by none --query @*[status=review] %}
 
 </div>
+
+### 授权发明专利
+
+- 叶亮, 潜龙昊, 梁琳. 滑跃甲板上起落过程中起落架对飞机作用力的确定方法: 中国, ZL201610788314.1[P]. 2021-03-23.（发明专利，第二发明人；公告号CN107798153B；申请日2016-08-31；专利权人：中仿智能科技（上海）股份有限公司）
 
 ## 授课经历
 

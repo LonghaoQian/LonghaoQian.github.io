@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: publications
-description: Published and accepted papers in reverse chronological order, followed by papers under review. “CAS Zone 1” refers to the top tier of the Chinese Academy of Sciences journal ranking.
+description: Published and accepted papers in reverse chronological order, followed by papers under review. “CAS Zone 1” refers to the top tier of the Chinese Academy of Sciences journal ranking; “JCR Q1” to the top quartile of Clarivate's Journal Citation Reports.
 nav: true
 nav_order: 2
 lang: en

@@ -26,6 +26,7 @@ toc:
     Google Scholar: <a href="https://scholar.google.ca/citations?hl=en&user=p2oGLVYAAAAJ">scholar.google.ca/citations?user=p2oGLVYAAAAJ</a>
   </td></tr>
   <tr><td><strong>Email</strong></td><td><a href="mailto:{{ email | encode_email }}">{{ email }}</a></td></tr>
+  <tr><td><strong>WeChat</strong></td><td>werewolf-1</td></tr>
 </table>
 
 ## Summary
@@ -120,6 +121,10 @@ _{{ p.period }}_
 {% bibliography --group_by none --query @*[status=review] %}
 
 </div>
+
+### Granted patents
+
+- Ye L, Qian L, Liang L. Method for determining the forces exerted by the landing gear on an aircraft during takeoff and landing on a ski-jump deck. Chinese invention patent ZL201610788314.1, Publication No. CN107798153B, granted 2021-03-23 (filed 2016-08-31). Second inventor; assignee: CNTech, Zhongfang Intelligent Technology (Shanghai) Co., Ltd.
 
 ## Teaching
 
